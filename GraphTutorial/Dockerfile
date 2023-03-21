@@ -4,4 +4,4 @@ WORKDIR /app
 RUN dotnet dev-certs https
 RUN dotnet dev-certs https --trust
 COPY published/ ./
-ENTRYPOINT ["dotnet", "GraphTutorial.dll --ASPNETCORE_URLS=$ASPNETCORE_URLS"]
+ENTRYPOINT ["dotnet", "GraphTutorial.dll", "ASPNETCORE_URLS=$ASPNETCORE_URLS"]
